@@ -1,0 +1,55 @@
+body{
+    font-family: fantasy;
+    background-color:antiquewhite;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.pokedex-container{
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    color:darkred;
+}
+.pokemon-list{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:30px;
+
+}
+.pokemon-card{
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    /* Añadimos un poco de sombra para que el efecto de zoom se vea más destacado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Aumentamos el tamaño de las tarjetas */
+    height: 300px; /* Aumentamos la altura de las tarjetas */
+}
+
+/* Al pasar el cursor sobre la tarjeta, aumentamos su tamaño */
+.pokemon-card:hover {
+    transform: scale(1.1); /* Zoom al 110% */
+}
+.pokemon-card img{
+    width: 200px;
+    height: 200px;
+}
+@media (width <=600px){
+    .pokemon-list{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media (600px < width < 900px){
+    .pokemon-list{
+    grid-template-columns: repeat(3,1fr);
+}
+}
